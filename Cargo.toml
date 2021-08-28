@@ -1,0 +1,11 @@
+[package]
+name = "crazy-inn"
+version = "0.1.0"
+authors = ["Brian Merchant <bhmerchant@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { git = "https://github.com/bevyengine/bevy.git", branch = "main" }
+rand = "0.8.4"

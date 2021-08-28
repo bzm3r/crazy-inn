@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="600"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="laser-sky-art.svg"
+   inkscape:export-filename="/home/felix/Projects/games/laser-sky/artwork/laser-sky-art.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="375"
+     inkscape:cy="302.71101"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="916"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-452.36215)">
+    <rect
+       style="fill:#222034;stroke:none"
+       id="rect2985"
+       width="800"
+       height="500"
+       x="0"
+       y="502.36212" />
+    <g
+       id="g4021"
+       transform="translate(407,640.36215)"
+       style="fill:#df7126;stroke:none">
+      <polygon
+         id="polygon4023"
+         points="10,-10 20,0 -20,0 " />
+      <polygon
+         id="polygon4025"
+         points="10,3 10,10 -10,3 " />
+    </g>
+    <g
+       id="g4038"
+       transform="translate(477,860.36215)"
+       style="stroke:none">
+      <rect
+         id="rect4040"
+         height="10"
+         width="30"
+         y="-5"
+         x="-10"
+         style="fill:#696a6a" />
+      <g
+         id="g4042"
+         style="fill:#847e87">
+        <path
+           id="path4044"
+           d="m -5,-15 a 15,15 -90 0 0 0,30"
+           inkscape:connector-curvature="0" />
+        <rect
+           id="rect4046"
+           height="16"
+           width="10"
+           y="-8"
+           x="0" />
+      </g>
+    </g>
+    <g
+       id="g4093"
+       transform="matrix(0.96,0,0,0.96,595,860.36215)"
+       style="stroke:none">
+      <g
+         id="g4095"
+         style="fill:#696a6a">
+        <rect
+           id="rect4097"
+           height="20"
+           width="40"
+           y="-10"
+           x="-15" />
+        <rect
+           id="rect4099"
+           height="5"
+           width="20"
+           y="-20"
+           x="5" />
+        <rect
+           id="rect4101"
+           height="5"
+           width="20"
+           y="15"
+           x="5" />
+      </g>
+      <g
+         id="g4103"
+         style="fill:#847e87">
+        <path
+           id="path4105"
+           d="M 0,-25 A 25,25 -90 0 0 0,25"
+           inkscape:connector-curvature="0" />
+        <rect
+           id="rect4107"
+           height="50"
+           width="10"
+           y="-25"
+           x="10" />
+      </g>
+    </g>
+    <g
+       id="g4125"
+       transform="translate(667,736.36215)"
+       style="fill:#ac3232;stroke:none">
+      <polygon
+         id="polygon4127"
+         points="-20,-10 20,0 -20,10 0,20 0,-20 " />
+    </g>
+    <g
+       id="g4139"
+       transform="translate(528,640.36215)"
+       style="fill:#ac3232;stroke:none">
+      <rect
+         id="rect4141"
+         height="20"
+         width="20"
+         y="-10"
+         x="-10" />
+      <rect
+         id="rect4143"
+         transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
+         height="20"
+         width="20"
+         y="-10"
+         x="-10" />
+    </g>
+    <g
+       id="g4156"
+       transform="translate(407,740.36215)"
+       style="fill:none;stroke:#8a6f30;stroke-width:6">
+      <line
+         id="line4158"
+         y2="-20"
+         x2="0"
+         y1="20"
+         x1="0" />
+      <line
+         id="line4160"
+         y2="15"
+         x2="8"
+         y1="15"
+         x1="-8" />
+      <line
+         id="line4162"
+         y2="8"
+         x2="10"
+         y1="8"
+         x1="-10" />
+    </g>
+    <g
+       id="g4176"
+       transform="translate(123,708.36215)"
+       style="fill:none;stroke:#6abe30;stroke-width:3">
+      <circle
+         id="circle4178"
+         r="10"
+         cy="0"
+         cx="0"
+         sodipodi:cx="0"
+         sodipodi:cy="0"
+         sodipodi:rx="10"
+         sodipodi:ry="10"
+         d="M 10,0 C 10,5.5228475 5.5228475,10 0,10 -5.5228475,10 -10,5.5228475 -10,0 c 0,-5.5228475 4.4771525,-10 10,-10 5.5228475,0 10,4.4771525 10,10 z" />
+      <line
+         id="line4180"
+         y2="0"
+         x2="5"
+         y1="0"
+         x1="-5" />
+      <line
+         id="line4182"
+         y2="5"
+         x2="0"
+         y1="-5"
+         x1="0" />
+    </g>
+    <g
+       id="g4196"
+       transform="translate(178,709.36215)"
+       style="fill:none;stroke:#d77bba;stroke-width:3">
+      <circle
+         id="circle4198"
+         r="10"
+         cy="0"
+         cx="0"
+         sodipodi:cx="0"
+         sodipodi:cy="0"
+         sodipodi:rx="10"
+         sodipodi:ry="10"
+         d="M 10,0 C 10,5.5228475 5.5228475,10 0,10 -5.5228475,10 -10,5.5228475 -10,0 c 0,-5.5228475 4.4771525,-10 10,-10 5.5228475,0 10,4.4771525 10,10 z" />
+      <line
+         id="line4200"
+         y2="0"
+         x2="5"
+         y1="0"
+         x1="-5" />
+      <line
+         id="line4202"
+         y2="-5"
+         x2="5"
+         y1="-5"
+         x1="-5" />
+      <line
+         id="line4204"
+         y2="5"
+         x2="5"
+         y1="5"
+         x1="-5" />
+    </g>
+    <g
+       id="g4219"
+       transform="translate(533,736.36215)"
+       style="fill:#d95763;stroke:none">
+      <polygon
+         id="polygon4221"
+         points="0,5 -10,10 0,-10 10,10 " />
+    </g>
+    <g
+       id="g4233"
+       transform="translate(666,635.36215)"
+       style="fill:none;stroke:#8a6f30;stroke-width:6">
+      <polyline
+         id="polyline4235"
+         points="15 -10, -15 0, 15 10" />
+      <line
+         id="line4237"
+         y2="0"
+         x2="15"
+         y1="0"
+         x1="-12" />
+    </g>
+    <g
+       id="g4250"
+       transform="translate(143.5,633.36215)"
+       style="fill:none;stroke:#9badb7;stroke-width:8">
+      <circle
+         id="circle4252"
+         r="15"
+         cy="0"
+         cx="15"
+         sodipodi:cx="15"
+         sodipodi:cy="0"
+         sodipodi:rx="15"
+         sodipodi:ry="15"
+         d="M 30,0 C 30,8.2842712 23.284271,15 15,15 6.7157288,15 0,8.2842712 0,0 c 0,-8.2842712 6.7157288,-15 15,-15 8.284271,0 15,6.7157288 15,15 z" />
+      <line
+         id="line4254"
+         y2="-15"
+         x2="-25"
+         y1="-15"
+         x1="15" />
+      <line
+         id="line4256"
+         y2="15"
+         x2="-25"
+         y1="15"
+         x1="15" />
+      <line
+         id="line4258"
+         y2="0"
+         x2="-15"
+         y1="0"
+         x1="0" />
+    </g>
+    <g
+       id="g4273"
+       transform="translate(235,710.36215)"
+       style="fill:none;stroke:#5fcde4;stroke-width:3">
+      <circle
+         id="circle4275"
+         r="10"
+         cy="0"
+         cx="0"
+         sodipodi:cx="0"
+         sodipodi:cy="0"
+         sodipodi:rx="10"
+         sodipodi:ry="10"
+         d="M 10,0 C 10,5.5228475 5.5228475,10 0,10 -5.5228475,10 -10,5.5228475 -10,0 c 0,-5.5228475 4.4771525,-10 10,-10 5.5228475,0 10,4.4771525 10,10 z" />
+      <circle
+         id="circle4277"
+         r="5"
+         cy="0"
+         cx="0"
+         sodipodi:cx="0"
+         sodipodi:cy="0"
+         sodipodi:rx="5"
+         sodipodi:ry="5"
+         d="M 5,0 C 5,2.7614237 2.7614237,5 0,5 -2.7614237,5 -5,2.7614237 -5,0 c 0,-2.7614237 2.2385763,-5 5,-5 2.7614237,0 5,2.2385763 5,5 z" />
+    </g>
+  </g>
+</svg>
