@@ -73,13 +73,13 @@ fn main() {
 }
 
 fn decay_score(
-    q_diner: Query<(&mut Score, &Children)>,
+    q_diner: Query<(&mut Score, &mut Children)>,
     q_txt: Query<&mut Text>,
 ) {
-    for (diner, children) in q_diner.iter() {
-        let current = diner.score;
-        let new = current.0 * 0.05;
-        diner.score = Score(new);
+    for (score, children) in q_diner.iter() {
+        let current = score.0;
+        let new = current * 0.05;
+        score = Score(new);
         for &child in children.iter() {
             let mut text = q_txt.get(child).unwrap();
             text.sections[0].value = new.into_string();
