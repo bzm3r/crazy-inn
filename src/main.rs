@@ -3,9 +3,6 @@ use rand::prelude::*;
 use std::collections::VecDeque;
 use std::iter::FromIterator;
 
-struct Pos(Vec2);
-struct Vel(Vec2);
-
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]
 struct Id(u32);
 
@@ -15,7 +12,10 @@ struct IsServing(bool);
 struct Score(f32);
 struct ScoreText;
 
-const NUM_DINERS: u32 = 6;
+const NUM_DINERS: u32 = 20;
+const WIN_HEIGHT: f32 = 800.0;
+const WIN_WIDTH: f32 = 800.0;
+const BDRY_OFFSET: f32 = 48.0;
 
 #[derive(Bundle)]
 struct ServerBundle {
@@ -32,15 +32,16 @@ struct DinerBundle {
 }
 
 struct Scoreboard {
-    score: usize,
+    score: u32,
+    min: u32,
 }
 
 fn main() {
     App::new()
         .insert_resource(WindowDescriptor {
             title: "Crazy Inn".to_string(),
-            width: 1000.0,
-            height: 1000.0,
+            width: WIN_WIDTH,
+            height: WIN_HEIGHT,
             vsync: true,
             ..Default::default()
         })
@@ -48,7 +49,7 @@ fn main() {
         .insert_resource(WaitQ(VecDeque::from_iter(
             (0..NUM_DINERS).map(|x| Id(x)),
         )))
-        .insert_resource(Scoreboard { score: 0 })
+        .insert_resource(Scoreboard { score: 0, min: 0 })
         .add_plugins(DefaultPlugins)
         .add_startup_system(setup)
         .add_system(decay_score)
@@ -63,12 +64,21 @@ fn decay_score(
     mut q_diner: Query<(&mut Score, &mut Timer, &Children)>,
     mut q_txt: Query<&mut Text>,
 ) {
-    scoreboard.score = 0;
+    let mut updated = false;
+    let mut total = 0;
+    let mut min = u32::MAX;
     for (mut score, mut timer, children) in q_diner.iter_mut() {
+        if min > score.0.round() as u32 {
+            min = score.0.round() as u32;
+        }
         if timer.tick(time.delta()).just_finished() {
+            updated = true;
             let new = score.0 * 0.95;
             score.0 = new;
-            scoreboard.score += new.round() as usize;
+            if min > score.0.round() as u32 {
+                min = score.0.round() as u32;
+            }
+            total += new.round() as u32;
             for child in children.iter() {
                 let mut text = q_txt.get_mut(*child).unwrap();
                 text.sections[0].value =
@@ -76,14 +86,22 @@ fn decay_score(
             }
         }
     }
+    if updated {
+        scoreboard.score = total;
+        scoreboard.min = min;
+    }
 }
 
 fn scoreboard_system(
     scoreboard: Res<Scoreboard>,
-    mut query: Query<&mut Text, With<ScoreText>>,
+    mut q_score: Query<&mut Text, With<ScoreText>>,
 ) {
-    let mut text = query.single_mut().unwrap();
-    text.sections[0].value = format!("Score: {}", scoreboard.score);
+    let mut text = q_score.single_mut().unwrap();
+    text.sections[0].value = format!(
+        "Score: {}, Min: {}",
+        (scoreboard.score as f32 / NUM_DINERS as f32).round() as u32,
+        scoreboard.min
+    );
 }
 
 fn serve_diners(
@@ -172,6 +190,7 @@ fn setup(
     };
 
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
+    commands.spawn_bundle(UiCameraBundle::default());
 
     let server_icon = asset_server.load("shield-powerup.png");
     let diner_icon = asset_server.load("gun-powerup.png");
@@ -180,8 +199,12 @@ fn setup(
     let init_score: f32 = 100.0;
     for x in 0..NUM_DINERS {
         let diner_pos = Vec2::new(
-            -(320.0 + 24.0) + (640.0 - 24.0) * rng.gen::<f32>(),
-            -(240.0 + 24.0) + (480.0 - 24.0) * rng.gen::<f32>(),
+            -1.0 * WIN_WIDTH * 0.5
+                + BDRY_OFFSET
+                + (WIN_WIDTH - BDRY_OFFSET * 2.0) * rng.gen::<f32>(),
+            -1.0 * WIN_HEIGHT * 0.5
+                + BDRY_OFFSET
+                + (WIN_HEIGHT - BDRY_OFFSET * 2.0) * rng.gen::<f32>(),
         );
         info!("diner_pos: {}, {}", diner_pos.x, diner_pos.y);
         let diner_id = commands
@@ -221,7 +244,7 @@ fn setup(
 
     for n in 0..3 {
         let server_pos =
-            Vec2::new(0.5 * 640.0 + (n as f32) * 24.0, 240.0);
+            Vec2::new(0.0 + (n as f32) * 24.0, 0.0 * WIN_HEIGHT);
         commands
             .spawn_bundle(ServerBundle {
                 priorities: Priority(None),
@@ -230,15 +253,11 @@ fn setup(
             })
             .insert_bundle(SpriteBundle {
                 material: materials.add(server_icon.clone().into()),
-                transform: {
-                    let mut t = Transform::from_translation(
-                        Vec3::new(server_pos.x, server_pos.y, 0.0),
-                    );
-                    // t.apply_non_uniform_scale(Vec3::new(
-                    //     2.5, 2.5, 1.0,
-                    // ));
-                    t
-                },
+                transform: Transform::from_translation(Vec3::new(
+                    server_pos.x,
+                    server_pos.y,
+                    0.0,
+                )),
                 ..Default::default()
             });
     }
@@ -275,7 +294,7 @@ fn setup(
                 position_type: PositionType::Absolute,
                 position: Rect {
                     top: Val::Px(5.0),
-                    right: Val::Px(5.0),
+                    left: Val::Px(5.0),
                     ..Default::default()
                 },
                 ..Default::default()
