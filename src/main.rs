@@ -255,7 +255,7 @@ fn setup(
                                 "fonts/Inconsolata-Regular.ttf",
                             ),
                             font_size: 40.0,
-                            color: Color::rgb(0.7, 0.7, 7.0),
+                            color: Color::rgb(0.9, 0.9, 0.9),
                         },
                     },
                     TextSection {
@@ -265,7 +265,7 @@ fn setup(
                                 "fonts/Inconsolata-Regular.ttf",
                             ),
                             font_size: 40.0,
-                            color: Color::rgb(0.7, 0.7, 0.7),
+                            color: Color::rgb(0.9, 0.9, 0.9),
                         },
                     },
                 ],
@@ -274,8 +274,8 @@ fn setup(
             style: Style {
                 position_type: PositionType::Absolute,
                 position: Rect {
-                    top: Val::Px(50.0),
-                    right: Val::Px(50.0),
+                    top: Val::Px(5.0),
+                    right: Val::Px(5.0),
                     ..Default::default()
                 },
                 ..Default::default()
