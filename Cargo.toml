@@ -4,8 +4,21 @@ version = "0.1.0"
 authors = ["Brian Merchant <bhmerchant@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
-bevy = { git = "https://github.com/bevyengine/bevy.git", branch = "main" }
 rand = "0.8.4"
+wasm-bindgen = "0.2.76"
+bevy_asset = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+bevy_ecs = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+bevy_math = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+bevy_sprite = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+bevy_text = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+bevy_transform = { git = "https://github.com/bevyengine/bevy.git", branch = "main"}
+
+[dependencies.bevy]
+git = "https://github.com/bevyengine/bevy.git"
+branch = "main"
+default-features = false
+features = ["bevy_winit", "render"]

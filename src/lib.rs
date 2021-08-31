@@ -2,6 +2,7 @@ use bevy::prelude::*;
 use rand::prelude::*;
 use std::collections::VecDeque;
 use std::iter::FromIterator;
+use wasm_bindgen::prelude::*;
 
 #[derive(Eq, PartialEq, Copy, Clone, Debug)]
 struct Id(u32);
@@ -36,7 +37,8 @@ struct Scoreboard {
     min: u32,
 }
 
-fn main() {
+#[wasm_bindgen(start)]
+pub fn main() {
     App::new()
         .insert_resource(WindowDescriptor {
             title: "Crazy Inn".to_string(),
