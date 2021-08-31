@@ -53,6 +53,7 @@ pub fn main() {
         )))
         .insert_resource(Scoreboard { score: 0, min: 0 })
         .add_plugins(DefaultPlugins)
+        .add_plugin(bevy_webgl2::WebGL2Plugin)
         .add_startup_system(setup)
         .add_system(decay_score)
         .add_system(serve_diners)
