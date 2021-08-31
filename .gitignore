@@ -1,4 +1,5 @@
 .idea
-package.json
 target
 *.lock
+pkg
+src

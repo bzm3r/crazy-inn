@@ -1,0 +1,15 @@
+{
+  "name": "crazy-inn",
+  "collaborators": [
+    "Brian Merchant <bhmerchant@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "crazy_inn_bg.wasm",
+    "crazy_inn.js",
+    "crazy_inn.d.ts"
+  ],
+  "module": "crazy_inn.js",
+  "types": "crazy_inn.d.ts",
+  "sideEffects": false
+}
