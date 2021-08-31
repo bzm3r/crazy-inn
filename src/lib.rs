@@ -13,9 +13,9 @@ struct IsServing(bool);
 struct Score(f32);
 struct ScoreText;
 
-const NUM_DINERS: u32 = 20;
-const WIN_HEIGHT: f32 = 800.0;
-const WIN_WIDTH: f32 = 800.0;
+const NUM_DINERS: u32 = 10;
+const WIN_HEIGHT: f32 = 400.0;
+const WIN_WIDTH: f32 = 1024.0;
 const BDRY_OFFSET: f32 = 48.0;
 
 #[derive(Bundle)]
